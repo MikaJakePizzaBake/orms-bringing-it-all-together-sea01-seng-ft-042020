@@ -16,7 +16,7 @@ class Dog
   def self.drop_table
     DB[:conn].execute("DROP TABLE IF EXISTS dogs")
   end
-  def
+  def save
     sql = <<-SQL
     INSERT INTO dogs(name, breed) VALUES(?, ?)
     SQL
