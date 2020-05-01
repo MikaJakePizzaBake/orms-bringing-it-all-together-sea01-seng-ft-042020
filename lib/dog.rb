@@ -56,7 +56,6 @@ class Dog
 
   def self.new_from_db(row_array)
     self.create({id: row_array[0], name: row_array[1], breed: row_array[2]})
-
   end
   def self.find_by_name(name)
     sql <<-SQL
