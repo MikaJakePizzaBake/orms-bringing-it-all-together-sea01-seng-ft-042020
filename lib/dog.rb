@@ -52,9 +52,15 @@ class Dog
   end
 
 
-  def self.new_from_db(row_array)
-         self.create({id: row_array[0], name: row_array[1], breed: row_array[2]})
+  def self.new_from_db(row)
+         Dog.new
+         id = row[0]
+         name= row[1]
+         breed = row[2]
+         Dog.new
      end
+
+
   def self.find_by_name(name)
     sql <<-SQL
     SELECT*FROM dogs WHERE name == ? LIMIT 1
