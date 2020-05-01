@@ -23,8 +23,8 @@ class Dog
     DB[:conn].execute(sql, self.name, self.breed)
   end
   def self.create(name:, breed:)
-      binding.pry
     dog = Dog.new(name: name, breed: breed)
+    binding.pry
     dog.save
     dog
 
