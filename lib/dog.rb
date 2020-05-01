@@ -26,15 +26,15 @@ class Dog
       DROP TABLE IF EXISTS dogs
       SQL
 
-     DB[:conn].execute(sql) 
+     DB[:conn].execute(sql)
   end
 
   def save
-    if self.id 
+    if self.id
       self.update
     else
       sql = <<-SQL
-        INSERT INTO dogs (name, breed) 
+        INSERT INTO dogs (name, breed)
         VALUES (?, ?)
       SQL
 
