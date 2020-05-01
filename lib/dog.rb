@@ -82,9 +82,9 @@ class Dog
        if !dog.empty?
           dog_data = dog[0]
        else
-          Dog.create(name: name, breed: breed)
+          dog = Dog.create(name: name, breed: breed)
        end
-       Dog
+       dog
       end
 
 end
