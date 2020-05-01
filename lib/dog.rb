@@ -84,7 +84,7 @@ class Dog
        else
           Dog.create(name: name, breed: breed)
        end
-       doggy
+       Dog
       end
 
 end
