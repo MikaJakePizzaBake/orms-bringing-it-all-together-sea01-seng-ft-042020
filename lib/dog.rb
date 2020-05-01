@@ -86,7 +86,7 @@ class Dog
       dog.create(name:name, breed:breed)
     end
     dog
-    
+
   end
 
 end
