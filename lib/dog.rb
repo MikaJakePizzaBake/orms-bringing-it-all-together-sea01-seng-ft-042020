@@ -55,11 +55,11 @@ class Dog
 
 
   def self.new_from_db(row)
-    id = row[0]
-    name = row[1]
-    breed = row[2]
-    dog = self.new(id, name, breed)
-    dog
+    new_dog = self.new
+    new_dog.id = row[0]
+    new_dog.name = row[1]
+    new_dog.breed = row[2]
+    new_dog
   end
   def self.find_by_name(name)
     sql <<-SQL
